@@ -1,0 +1,39 @@
+<div class="card mt-3">
+    <div class="card-header bg-dark">
+        <h5 class="text-light">Quản lý danh mục sản phẩm</h5>
+    </div>
+    <div class="card-body">
+        <div class="form-group mb-3">
+            <label for="masp">Mã SP</label>
+            <input type="text" class="form-control" #inputMaSP id="masp">
+        </div>
+        <div class="form-group mb-3">
+            <label for="tensp">Tên SP</label>
+            <input type="text" class="form-control" #inputTenSP id="tensp">
+        </div>
+        <div class="form-group mb-3">
+            <label for="gia">Giá</label>
+            <input type="number" class="form-control" #inputGia id="gia">
+        </div>
+        <button class="btn btn-success" (click)="addItem(inputMaSP.value,inputTenSP.value,inputGia.value)">Thêm Sản
+            Phẩm</button>
+    </div>
+</div>
+<table class="table mt-3">
+    <thead>
+        <tr class="table-dark">
+            <th scope="col">STT</th>
+            <th scope="col">Mã SP</th>
+            <th scope="col">Tên SP</th>
+            <th scope="col">Giá</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of arrProduct" [ngClass]="{'table-active': item.id % 2 === 0}">
+            <td><b>{{item.id}}</b></td>
+            <td>{{item.maSP}}</td>
+            <td>{{item.tenSP}}</td>
+            <td>{{item.gia}}</td>
+        </tr>
+    </tbody>
+</table>

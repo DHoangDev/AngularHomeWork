@@ -1,0 +1,22 @@
+<table class="w-75 ">
+    <thead>
+        <tr>
+            <th class="yellow">Danh sách ghế đã đặt ({{arrGhe.length}})</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ghe of arrGhe">
+            <td class="w-size py-2">
+                Ghế: {{ghe.TenGhe}} ${{ghe.Gia}}
+                <button style="border: none; background-color: unset;" class="w-pink" (click)="remove(ghe)">
+                    [ Hủy ]
+                </button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Tổng tiền: ${{tongTien}} </td>
+        </tr>
+    </tfoot>
+</table>

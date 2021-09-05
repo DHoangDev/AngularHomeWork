@@ -1,0 +1,7 @@
+<p>contact works!</p>
+<div class="form-control">
+    <p>Input Number:</p>
+    <input type="text" #input class="form-control w-25 my-3">
+    <p>Output: {{_value}}</p>
+    <button class="btn btn-primary" (click)="getValue(input.value)">Get Value</button>
+</div>

@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col-3 my-2 text-center" *ngFor="let item of danhSachGhe">
+        <button class="btn text-white w-50" [ngClass]="{'pink':item.TrangThai,'gray':!item.TrangThai,
+            'green':item.DangDat}" (click)="datGhe(item)">
+            {{item.SoGhe}}
+        </button>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+.gray {
+    background-color: #747474;
+}
+
+.green {
+    background-color: #28a745 !important;
+}
+
+.pink {
+    background-color: #e77b85;
+    pointer-events: none;
+}

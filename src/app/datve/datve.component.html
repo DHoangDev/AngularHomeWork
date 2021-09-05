@@ -1,0 +1,18 @@
+<div class="row">
+    <div>
+        <h3 class="yellow text-center my-4">ĐẶT VÉ XE BUS HÃNG CYBERSOFT</h3>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="text-center w-50 rounded bg-title py-3" style="margin-left: 5%;">
+                <b>Tài xế</b>
+            </div>
+            <div class="my-2">
+                <app-ghe #tagGhe (data)="datVe($event)"></app-ghe>
+            </div>
+        </div>
+        <div class="col-6 px-5">
+            <app-dsghe #tagDanhSachGhe (data)="huyVe($event)"></app-dsghe>
+        </div>
+    </div>
+</div>
